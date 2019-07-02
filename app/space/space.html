@@ -1,0 +1,49 @@
+<div class="panel panel-default col-md-4">
+    <div ng-if="!sc.ready1">
+        <img class="center-block img-responsive" src="images/loading.gif" height="75%" width="75%" />
+    </div>
+    <div class="panel-body" ng-if="sc.ready1">
+        <h2>ISS Current Location</h2>
+        <p>Longitude: {{sc.iss.iss_position.longitude}}</p>
+        <p>Latitude: {{sc.iss.iss_position.latitude}}</p>
+    </div>
+</div>
+<div class="panel panel-default col-md-4">
+    <div ng-if="!sc.ready2">
+        <img class="center-block img-responsive" src="images/loading.gif" height="75%" width="75%" />
+    </div>
+    <div class="panel-body" ng-if="sc.ready2">
+        <h2>NASA's Astronomy Picture of the Day for {{sc.apodDate}}</h2>
+        <img ng-src="{{sc.apod}}" title="{{sc.apodTitle}}" alt="{{sc.apodInfo}}" height="100%" width="100%">
+        <h3>{{sc.apodTitle}}</h3>
+        <p>{{sc.apodInfo}}</p>
+    </div>
+</div>
+<div class="panel panel-default col-md-4">
+    <div ng-if="!sc.ready3">
+        <img class="center-block img-responsive" src="images/loading.gif" height="75%" width="75%" />
+    </div>
+    <div class="panel-body" ng-if="sc.ready3">
+        <h2>NASA's Near Earth Objects for {{sc.apodDate}}</h2>
+        <h3>There are {{sc.neo.element_count}} NEOs today</h3>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>NEO Name</th>
+                <th>Is Dangerous</th>
+                <th>Diameter (miles)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="neo in sc.neo.near_earth_objects[sc.today]">
+                <td>{{neo.name}}</td>
+                <td>
+                    <span class="glyphicon glyphicon-remove-sign text-danger" ng-if="!neo.is_potentially_hazardous_asteroid"> No</span>
+                    <span class="glyphicon glyphicon-ok-sign text-success" ng-if="neo.is_potentially_hazardous_asteroid"> Yes</span>
+                </td>
+                <td>{{neo.estimated_diameter.miles.estimated_diameter_max}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

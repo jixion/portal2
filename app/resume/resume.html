@@ -1,0 +1,79 @@
+<div class="col-md-2">
+</div>
+<div class="panel panel-default col-md-8 resume-panel">
+    <span class="panel-body">
+        <div class="pull-right">
+        <b>Downloads:</b>
+        <a href="../files/resume.docx" download>
+            <span class="fas fa-2x fa-file-word"></span>
+        </a>
+        <a href="../files/resume.pdf" download>
+            <span class="fas fa-2x fa-file-pdf"></span>
+        </a>
+        </div>
+        <h2>
+            <span class="btn btn-default font-30" style="padding-top: 5px; padding-bottom: 5px; background-color: rgba(255,255,255,.3);">
+                {{rc.resume.name}}
+            </span>
+            <span class="btn btn-default pull-right" style="padding-top: 9px; padding-bottom: 9px; background-color: rgba(255,255,255,.3);">
+                <span class="devicon-c-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-cplusplus-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-bitbucket-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-bower-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-git-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-gulp-plain colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-html5-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-javascript-plain colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-jetbrains-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-css3-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-bootstrap-plain-wordmark colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-nodejs-plain colored pull-right font-40 font-shadow"></span>
+                <span class="devicon-angularjs-plain colored pull-right font-40 font-shadow"></span>
+            </span>
+        </h2>
+        <h5 class="text-center panel" style="background-color: rgba(255,255,255,.3);">
+            <div ng-if="rc.showAddress">
+                <span class="glyphicon glyphicon-map-marker"></span> {{rc.resume.address}}
+                <br />
+            </div>
+            <a href="mailto:{{rc.resume.email}}"><span class="glyphicon glyphicon-envelope"></span> {{rc.resume.email}}</a> <b>*</b> <a target="_blank" href="{{rc.resume.link}}"><span class="glyphicon glyphicon-link"></span> {{rc.resume.link}}</a>
+            <b>*</b>
+            <a target="_blank" href="{{rc.resume.github}}"><span class="glyphicon glyphicon-link"></span> {{rc.resume.github}}</a>
+        </h5>
+        <p class="panel" style="background-color: rgba(255,255,255,.3);">{{rc.resume.intro}}</p>
+        <div class="panel" style="background-color: rgba(255,255,255,.2);">
+            <h3>
+                <span class="glyphicon glyphicon-check font-shadow-black" style="color: green;"></span> Known Technologies
+            </h3>
+            <span ng-repeat="(key, value) in rc.resume.expertise">
+            <span class="btn btn-default" style="margin: 2px; background-color: rgba(255,255,255,.2);">
+                {{key}}:
+                <span ng-if="value >= 8" class="badge" style="color:black; background-color: gold">{{value}}/10</span>
+                <span ng-if="value >= 6 && value < 8" class="badge" style="color:black; background-color: silver">{{value}}/10</span>
+                <span ng-if="value < 6" class="badge" style="color:black; background-color: chocolate">{{value}}/10</span>
+            </span>
+        </span>
+        </div>
+        <div class="panel" style="background-color: rgba(255,255,255,.3);">
+            <h3>
+                <span class="glyphicon glyphicon-star font-shadow-black" style="color: gold;"></span> Achievements</h3>
+            <ul>
+                <li ng-repeat="achievement in rc.resume.achievements">{{achievement}}</li>
+            </ul>
+        </div>
+        <div class="panel" style="background-color: rgba(255,255,255,.3);">
+            <h3><span class="glyphicon glyphicon-road font-shadow" style="color: black;"></span> Experience</h3>
+            <span ng-repeat="datum in rc.resume.experience">
+                <h5 class="pull-left">{{datum.title}} | {{datum.employer}}</h5>
+                <h5 class="pull-right">{{datum.startDate}} to {{datum.endDate}}</h5>
+                <br /><br />
+                <ul>
+                    <li ng-repeat="point in datum.description">{{point}}</li>
+                </ul>
+                <br />
+            </span>
+        </div>
+    </div>
+</div>
+<div class="col-md-2">
+</div>

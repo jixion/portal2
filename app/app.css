@@ -1,0 +1,78 @@
+/* app css stylesheet */
+
+body {
+  background-color: silver;
+}
+
+.panel {
+    opacity: .9;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navbar {
+    opacity: .9;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-25 {
+    font-size: 25px;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+
+.font-32 {
+    font-size: 32px;
+}
+
+.font-40 {
+    font-size: 35px;
+}
+
+.font-50 {
+    font-size: 50px;
+}
+
+.font-55 {
+    font-size: 55px;
+}
+
+.font-60 {
+    font-size: 60px;
+}
+
+.font-64 {
+    font-size: 64px;
+}
+
+.font-shadow {
+    text-shadow: 2px 2px #ffffff;
+}
+
+.font-shadow-black {
+    text-shadow: 2px 2px #000000;
+}
+
+.resume-panel {
+    background: url(/images/paper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15px;
+}
+
+.fa-file-pdf {
+    color: red;
+}
+
+.fa-file-word {
+    color: blue;
+}
