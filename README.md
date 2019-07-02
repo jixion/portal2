@@ -1,10 +1,10 @@
 
 
-# Portal
+# Portal2
  
-[![Travis CI](https://travis-ci.org/jixion/portal.svg?branch=develop)](https://travis-ci.org/jixion/portal.svg?branch=develop)
-[![Coverage Status](https://coveralls.io/repos/github/jixion/portal/badge.svg?branch=develop)](https://coveralls.io/github/jixion/portal?branch=develop)
-[![Code Climate](https://codeclimate.com/github/jixion/portal/badges/gpa.svg)](https://codeclimate.com/github/jixion/portal)
+[![Travis CI](https://travis-ci.org/jixion/portal2.svg?branch=develop)](https://travis-ci.org/jixion/portal.svg?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/jixion/porta2l/badge.svg?branch=develop)](https://coveralls.io/github/jixion/portal?branch=develop)
+[![Code Climate](https://codeclimate.com/github/jixion/portal2/badges/gpa.svg)](https://codeclimate.com/github/jixion/portal)
 
 Portfolio site designed to showcase front end and api skills. Created using angular-seed at [https://github.com/angular/angular-seed](https://github.com/angular/angular-seed)
 
