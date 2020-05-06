@@ -39,9 +39,13 @@ angular.module('portal.weather', ['ngRoute', 'owm_api', 'portal.can_has_drag'])
         function getZip(z, c) {
             return gcs.get({ zip: z, country: c }).$promise;
         }
+        function getFahrenheit(kelvin) {
+            return (kelvin - 273.15) × 9/5 + 32;
+        }
         _.each(zips, function (cs) {
             getZip(_.get(cs, 'zip'), _.get(cs, 'country'))
                 .then(function (result) {
+                    _.set(result, 'fahrenheit', getFahrenheit(result.main.temp));
                     _.get(wc, 'owmResults').push(result);
                 });
         });
