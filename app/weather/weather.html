@@ -3,7 +3,7 @@
         <div class="panel-body">
             <h2>OpenWeatherMaps Data for {{weather.name}}, {{weather.sys.country}}</h2>
             <p>Current conditions: {{weather.weather[0].description}}</p>
-            <p>Temperature: {{weather.main.temp}} K</p>
+            <p>Temperature: {{weather.fahrenheit}} F</p>
             <p>Wind speed: {{weather.wind.speed}} mph</p>
             <p>Wind direction: {{wc.getCardinalDir(weather.wind.deg)}}</p>
         </div>
