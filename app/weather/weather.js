@@ -40,7 +40,7 @@ angular.module('portal.weather', ['ngRoute', 'owm_api', 'portal.can_has_drag'])
             return gcs.get({ zip: z, country: c }).$promise;
         }
         function getFahrenheit(kelvin) {
-            return (kelvin - 273.15) × 9/5 + 32;
+            return (((kelvin - 273.15) * 9) / 5) + 32;
         }
         _.each(zips, function (cs) {
             getZip(_.get(cs, 'zip'), _.get(cs, 'country'))
