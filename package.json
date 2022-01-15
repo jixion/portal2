@@ -56,7 +56,7 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "phantomjs": "^2.1.7",
     "protractor": "^3.2.2",
-    "shelljs": "^0.6.0"
+    "shelljs": "^0.8.5"
   },
   "scripts": {
     "prepublish": "node_modules/.bin/bower install --allow-root",
